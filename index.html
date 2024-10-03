@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./iconapp.png" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-EN0DRPF9Q7"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-EN0DRPF9Q7");
+    </script>
+
+    <meta
+      name="description"
+      content="NamsoGen is a random test credit card number generator based on your own BIN pattern. Generate credit card numbers for testing purposes with ease."
+    />
+    <meta
+      name="keywords"
+      content="ccgen, credit card generator, generator, cc, bin, credit, mastercard, visa, amex, discover, namso gen, namso gen.com, namsogen"
+    />
+    <meta name="author" content="megatopx" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Namso Gen - Credit Cards Generator" />
+    <meta
+      property="og:description"
+      content="NamsoGen is a random test credit card number generator based on your own BIN pattern. Generate credit card numbers for testing purposes with ease."
+    />
+    <meta property="og:image" content="./iconapp.png" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Namso Gen - Credit Cards Generator" />
+    <meta
+      name="twitter:description"
+      content="NamsoGen is a random test credit card number generator based on your own BIN pattern. Generate credit card numbers for testing purposes with ease."
+    />
+    <meta name="twitter:image" content="./iconapp.png" />
+
+    <title>Namso Gen - Credit Cards Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
+    />
+    <style>
+      body {
+        font-family: "Roboto Mono", monospace;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      body.light-mode {
+        background-color: #f8f9fa;
+        color: #212529;
+      }
+
+      body.dark-mode {
+        background-color: #1b1e21;
+        color: #f8f9fa;
+        header,
+        footer {
+          padding: 1rem;
+          background-color: #161a24;
+          color: rgb(228, 228, 228);
+          text-align: center;
+        }
+      }
+
+      .theme-toggle {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+        font-size: 1.5rem;
+        z-index: 1000;
+      }
+
+      .copy-btn {
+        position: absolute;
+        top: 38px;
+        right: 15px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        color: #0d6efd;
+        z-index: 10;
+      }
+
+      .container {
+        max-width: 600px;
+        padding: 2rem;
+        border-radius: 8px;
+        background-color: inherit;
+      }
+
+      .form-control,
+      .form-select {
+        background-color: inherit;
+        color: inherit;
+        border: 1px solid #ced4da;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .form-control:focus,
+      .form-select:focus {
+        box-shadow: none;
+        border-color: #0d6efd;
+        background-color: inherit;
+        color: inherit;
+      }
+
+      .form-control::placeholder {
+        color: #999;
+      }
+
+      .form-select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 viewBox%3D%220 0 4 5%22%3E%3Cpath fill%3D%22%230d6efd%22 d%3D%22M2 0L0 2h4L2 0zm0 5L0 3h4L2 5z%22/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 0.75rem center;
+        background-size: 8px 10px;
+      }
+
+      .form-select option {
+        background-color: #212529;
+        color: #f8f9fa;
+      }
+
+      .btn-primary {
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+      }
+
+      .btn-primary:hover {
+        background-color: #0b5ed7;
+        border-color: #0a58ca;
+      }
+
+      textarea {
+        resize: none;
+        overflow: hidden;
+        max-height: 150px;
+        height: 200px;
+        text-align: center;
+      }
+
+      textarea::-webkit-scrollbar {
+        display: none;
+      }
+
+      textarea {
+        overflow-y: scroll;
+        resize: none;
+      }
+
+      .article-section {
+        margin-top: 3rem;
+      }
+
+      header,
+      footer {
+        padding: 0.5rem;
+        background-color: #d9d9d9;
+        color: rgb(8, 8, 8);
+        text-align: center;
+      }
+
+      footer {
+        margin-top: 3rem;
+      }
+
+      .footer-links {
+        margin-top: 1rem;
+      }
+
+      .footer-links a {
+        color: rgb(55, 57, 194);
+        text-decoration: none;
+        margin: 0 0.5rem;
+      }
+
+      .footer-links a:hover {
+        text-decoration: underline;
+      }
+
+      .banner {
+        background-color: #e3714b;
+        color: rgb(255, 255, 255);
+        padding: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .banner img {
+        height: 50px;
+        margin-right: 1rem;
+      }
+
+      .banner a {
+        color: #212529;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .banner a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body class="light-mode">
+    <header>
+      <div class="banner">
+        <img src="./iconapp.png" alt="Icon App" />
+        <p>
+          Made with ❤️ by
+          <a
+            href="https://anukar.net/"
+            >@AnukarOP</a
+          >
+        </p>
+      </div>
+    </header>
+
+    <div class="theme-toggle" onclick="toggleTheme()">
+      <i id="theme-icon" class="fa-solid fa-moon"></i>
+    </div>
+    <div class="container my-5 shadow">
+      <h1 class="text-center mb-4"><b>Credit Cards Generator</b></h1>
+      <p>
+        - Do ⭐ the Github Repository 
+        <a target="_blank" href="https:/github.com/AnukarOP/namso-gen/">here</a>
+      </p>
+      <form>
+        <div class="mb-3">
+          <label for="bin" class="form-label"><b>BIN</b></label>
+          <input
+            type="text"
+            class="form-control"
+            id="bin"
+            placeholder="37513874xx0591x"
+          />
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="month" class="form-label"><b>MONTH</b></label>
+            <select class="form-select" id="month">
+              <option value="Random">Random</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="year" class="form-label"><b>YEAR</b></label>
+            <select class="form-select" id="year">
+              <option value="Random">Random</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+              <option value="2031">2031</option>
+              <option value="2032">2032</option>
+              <option value="2033">2033</option>
+              <option value="2034">2034</option>
+              <option value="2035">2035</option>
+              <option value="2036">2036</option>
+              <option value="2037">2037</option>
+              <option value="2038">2038</option>
+              <option value="2039">2039</option>
+              <option value="2040">2040</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="ccv" class="form-label"><b>CCV</b></label>
+            <input
+              type="text"
+              class="form-control"
+              id="ccv"
+              placeholder="Random"
+            />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="count" class="form-label"><b>QUANTITY</b></label>
+            <input
+              type="text"
+              class="form-control"
+              id="count"
+              placeholder="20"
+            />
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="generate()">
+          <b>Generate</b>
+        </button>
+        <br /><br /><br />
+        <div class="mb-3 position-relative">
+          <label for="output" class="form-label"><b>RESULT</b></label>
+          <i class="fa-solid fa-copy copy-btn" onclick="copyToClipboard()"></i>
+          <textarea
+            class="form-control"
+            id="output"
+            rows="5"
+            readonly
+          ></textarea>
+        </div>
+      </form>
+    </div>
+    <div style="max-width: 1200px" class="container my-5 shadow">
+      <div class="article-section">
+        <h2>Introduction to the "Namso Gen" or "Namsogen" Tool</h2>
+        <p>
+          The "Namso Gen" or "Namsogen" tool is a generator of fictitious credit
+          card numbers mainly used for testing and development purposes.
+          Software developers, testers, and QA (Quality Assurance) professionals
+          use this tool to verify the functionality of payment processing
+          systems without needing to use real card numbers, helping to avoid
+          potential fraud and security breaches.
+        </p>
+
+        <h2>How the Tool Works</h2>
+        <p>
+          The "Namso Gen" tool uses a specific algorithm that generates valid
+          credit card numbers based on the format and rules of real cards, such
+          as the Luhn algorithm. These numbers, while structurally valid, do not
+          have associated funds and therefore cannot be used for real financial
+          transactions.
+        </p>
+
+        <h2>Main Features</h2>
+        <ul>
+          <li>
+            <strong>BIN (Bank Identification Number) Generation</strong>: The
+            tool allows the user to input a specific BIN or generate card
+            numbers based on random BINs. The BIN consists of the first six
+            digits of the card and identifies the issuing institution.
+          </li>
+          <li>
+            <strong>Expiration Date</strong>: The user can select a specific
+            month and year or opt for random values for the card's expiration
+            date.
+          </li>
+          <li>
+            <strong>Security Code (CCV)</strong>: Similar to the expiration
+            date, the security code can be user-defined or randomly generated.
+          </li>
+          <li>
+            <strong>Quantity of Cards</strong>: The tool allows generating
+            multiple card numbers in a single request, according to the user's
+            needs.
+          </li>
+        </ul>
+
+        <h2>Advantages of Using the Tool</h2>
+        <ul>
+          <li>
+            <strong>Security</strong>: Using fictitious numbers avoids the risks
+            associated with using real cards in testing environments.
+          </li>
+          <li>
+            <strong>Ease of Use</strong>: The intuitive interface allows even
+            users with little technical experience to use the tool efficiently.
+          </li>
+          <li>
+            <strong>Flexibility</strong>: The tool offers various options for
+            customizing the generated numbers, meeting diverse testing needs.
+          </li>
+        </ul>
+        <p>
+          The "Namso Gen" or "Namsogen" is an essential tool for professionals
+          working with payment systems. It ensures security and efficiency in
+          software development and testing, significantly contributing to the
+          improvement of digital financial services quality.
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Credit Cards Generator</p>
+    </footer>
+
+    <script src="https://unpkg.com/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
