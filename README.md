@@ -69,3 +69,7 @@ Do ⭐ the repository if you found it useful!
 ## Disclaimer
 
 Namso Gen generates **fictitious credit card numbers** solely for **testing purposes**. These numbers are not real, do not contain funds, and cannot be used for actual transactions. Always use these tools responsibly.
+
+##
+
+![](https://visitor-badge.laobi.icu/badge?page_id=AnukarOP.readme)
