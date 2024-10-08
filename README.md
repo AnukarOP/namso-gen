@@ -38,7 +38,7 @@ Make sure you have the following:
 
 ## Demo
 
-You can try out the application directly [here](https://github.com/AnukarOP/namso-gen).
+You can try out the application directly [here](https://anukarop.is-a.dev/namso-gen/).
 
 ## How It Works
 
