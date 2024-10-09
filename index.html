@@ -109,8 +109,8 @@
       textarea {
         resize: none;
         overflow: hidden;
-        max-height: 150px;
-        height: 200px;
+        height: 300px;
+        width: 100%;
         text-align: center;
       }
 
@@ -137,6 +137,10 @@
         .result-section {
           flex: 0.6;
           max-width: var(--result-section-width, 600px);
+        }
+
+        .result-section textarea {
+          height: 400px;
         }
       }
     </style>
