@@ -62,7 +62,7 @@ This project is licensed under the MIT License. See the [LICENSE](https://github
 
 ## Contact
 
-Made with ❤️ by [@AnukarOP](https://anukar.net/). If you have any questions or feedback, feel free to reach out.
+Made with ❤️ by [@AnukarOP](https://anukar.tech/). If you have any questions or feedback, feel free to reach out.
 
 Do ⭐ the repository if you found it useful!
 
