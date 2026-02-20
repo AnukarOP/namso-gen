@@ -1,7 +1,23 @@
 # Namso Gen - Credit Cards Generator
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/AnukarOP/namso-gen/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/AnukarOP/namso-gen)](https://github.com/AnukarOP/namso-gen/stargazers)
+<p align="center">
+  <a href="https://github.com/AnukarOP/namso-gen/stargazers"><img src="https://img.shields.io/github/stars/AnukarOP/namso-gen?style=for-the-badge&logo=github&color=yellow" alt="GitHub Stars"></a>
+  <a href="https://github.com/AnukarOP/namso-gen/network/members"><img src="https://img.shields.io/github/forks/AnukarOP/namso-gen?style=for-the-badge&logo=github&color=blue" alt="GitHub Forks"></a>
+  <a href="https://github.com/AnukarOP/namso-gen/blob/main/LICENSE"><img src="https://img.shields.io/github/license/AnukarOP/namso-gen?style=for-the-badge&color=purple" alt="License"></a>
+  <a href="https://x.com/AnukarOP"><img src="https://img.shields.io/badge/Follow%20me-000000?style=for-the-badge&logo=x&logoColor=white" alt="Follow me on X"></a>
+</p>
+
+---
+
+### ⭐ Star History
+
+<p align="center">
+  <a href="https://star-history.com/#AnukarOP/namso-gen&Date">
+    <img src="https://api.star-history.com/svg?repos=AnukarOP/namso-gen&type=Date" alt="Star History Chart" width="700">
+  </a>
+</p>
+
+---
 
 NamsoGen is a random test credit card number generator based on your own BIN pattern. This tool is designed to provide test card numbers for development purposes, helping software developers, testers, and QA professionals validate payment systems without needing real card details.
 
