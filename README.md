@@ -9,15 +9,13 @@
 
 ---
 
-### ⭐ Star History
 
-<p align="center">
+<!-- <p align="center">
   <a href="https://star-history.com/#AnukarOP/namso-gen&Date">
     <img src="https://api.star-history.com/svg?repos=AnukarOP/namso-gen&type=Date" alt="Star History Chart" width="700">
   </a>
-</p>
+</p> -->
 
----
 
 NamsoGen is a random test credit card number generator based on your own BIN pattern. This tool is designed to provide test card numbers for development purposes, helping software developers, testers, and QA professionals validate payment systems without needing real card details.
 
